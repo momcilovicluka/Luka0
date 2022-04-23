@@ -38,3 +38,11 @@ Counter >> initialize [
 super initialize.
 count:= 0
 ]
+
+{ #category : #accessing }
+Counter >> printOn: aStream [
+
+	super printOn: aStream. "a Counter"
+	aStream nextPutAll:  ' withValue: ' , count printString.
+	aStream cr
+]
